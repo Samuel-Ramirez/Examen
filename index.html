@@ -1,56 +1,42 @@
 <html>
-	<head>
-		<title>Tiendas Tec.S</title>
-
-
+<head>
+<title> Ingresar el nombre de usuario </title>
+	<title>Tiendas Tec.S</title>
 	<link rel="stylesheet"
 		  type="text/css"
-		  href="bootstrap.css"
-	      />
+		  href="fondo.css"/>
+<script>
+function comprobarClave(){
+	clave1= document.f1.clave1.value
+	clave2= document.f1.clave2.value
+	if(clave1=="samuel" && clave2=="ramirez"){
+		alert("Las contraseñas coinciden...\n Adelante");
+		var href = "ventas.html";
+		window.location=href;
+}
+else{
+	alert("las contraseñas ingresadas son diferentes..\n vuelve a intentarlo otra vez.");
+	var href= "dos.html";
+	window.location=href;
+	};
+}
 
-	<link rel="stylesheet"
-		  type="text/css"
-		  href="styles.css"
-	      />	
-	</head>
-	<body>
-		<header>Esta es la pagina web de Tiendas Tec.S</header><br>
-		<a
-		href="index.html" class="greenlink">
-			Principal
-		</a>
-		 &nbsp;
-		<a 
-		href="aboutme.html" class="greenlink">
-			Acerca de Tec.S
-		</a>
-		 &nbsp;
-		<a 
-		href="productos.html" class="greenlink">
-			Productos 
-		</a>
-		&nbsp;
-		<a 
-		href="contact.html" class="greenlink">
-			Contacto
-		</a>
-
-		</hr>
-
-	<div class="container">
-		<h1> Tiendas Tec.S </h1>
-        <article>
-         <center> <p> Venta de Telefonos </p> <img src="grhaphi\tec.jpeg" width="100" height="100"></center>
-		</article>
-      
-		<div class="row">
-			<div class="col-md-5 thin_border">
-			  <h2> Misión:</h2> Ofrecer a nuestros clientes dispositivos de calidad con precios menores al mercado estandar, garantisarles su calidad y ofrecerles los mejores seguros para el equipo.
-			</div>
-			<div class="col-md-5 thin_border">
-			  <h2> Visión:</h2> Lograr que nuestros clientes confien en nosotros y que se sientan satisfechos con los productos que adquieran tanto en calidad, durabilidad y precio 
-			</div>
-		</div>
-	</div>
-	</body>
+</script>
+</head>
+<body>
+<hr color="black">
+<center><h1> Validar  contraseña y la repeticion de la contraseña  </h1></center>
+<hr color="black">
+<h2> Escribe la contraseña , una en cada campo y pulsa el boton, javascript te dira si son iguales</h2>
+<br>
+<p>La contraseña es <b>"samuel"</b> </p>
+<p>Escribe <b>"ramirez"</b> en Repite la contraseña </p>
+<form action="" name="f1">
+<p>Contraseña: <input type="password" name="clave1" size =20"> </p>
+<br>
+<p>Repite la contraseña: <input type="password" name="clave2" size =20"> </p>
+<br>
+<input type="button" value="comprobar" onClick="comprobarClave()"> 
+</form>
+</body>
 </html>
